@@ -1,5 +1,5 @@
-import { RichText } from "storyblok-nextjs";
-import { sb } from "@/storyblok";
+import type { RichText } from "storyblok-nextjs";
+import { Render } from "@/blocks";
 
 type Props = {
   headline: string;
@@ -10,7 +10,7 @@ export default function Teaser({ headline, text }: Props) {
   return (
     <div>
       <h2 className="text-2xl mb-10">{headline}</h2>
-      <sb.RichText text={text} />
+      <Render.RichText text={text} />
     </div>
   );
 }

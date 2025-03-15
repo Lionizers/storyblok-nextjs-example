@@ -1,5 +1,5 @@
 import { RichText } from "storyblok-nextjs";
-import { sb } from "@/storyblok";
+import { Render } from "@/blocks";
 
 type Props = {
   name: string;
@@ -10,7 +10,7 @@ export default function Feature({ name, text }: Props) {
   return (
     <div className="column feature">
       <h2>{name}</h2>
-      <sb.RichText text={text} />
+      <Render.RichText text={text} />
     </div>
   );
 }

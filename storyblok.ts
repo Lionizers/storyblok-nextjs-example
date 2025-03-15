@@ -1,11 +1,9 @@
-import { StoryblokNext } from "storyblok-nextjs";
-import { blocks } from "./components/blocks";
+import { StoryblokNext } from "storyblok-nextjs/server";
 
 export const sb = new StoryblokNext({
-  blocks,
   dataResolvers: {
-    async page(_page, { getStories }) {
-      const rootStories = await getStories({
+    async page(_page, { loader }) {
+      const rootStories = await loader.getStories({
         level: 1,
       });
       return {

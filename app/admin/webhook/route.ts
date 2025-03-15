@@ -1,3 +1,3 @@
 import { sb } from "@/storyblok";
 
-export default sb.previewPage;
+export const POST = sb.webhook();

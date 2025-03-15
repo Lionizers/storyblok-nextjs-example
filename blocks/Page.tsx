@@ -1,6 +1,6 @@
 import { Block } from "storyblok-nextjs";
-import { NavItemProps } from "../MainNav";
-import { sb } from "@/storyblok";
+import { Render } from "@/blocks";
+import { NavItemProps } from "@/components/MainNav";
 
 type Props = {
   body: Block[];
@@ -8,5 +8,5 @@ type Props = {
 };
 
 export default function Page({ body }: Props) {
-  return <sb.Blocks blocks={body} />;
+  return <Render.List blocks={body} />;
 }
